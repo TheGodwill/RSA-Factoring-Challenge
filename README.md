@@ -1,11 +1,22 @@
 # RSA-Factoring-Challenge
 
-Background Context Before you continue reading, start this song in the background :) 
-We have sniffed an unsecured network and found numbers that are used to encrypt very important documents. It seems that those numbers are not always generated using large enough prime numbers. Your mission should you choose to accept it, is to factorize these numbers as fast as possible before the target fixes this bug on their server - so that we can decode the encrypted documents.  This project is NOT mandatory at all. It is 100% optional. Doing any part of this project will add a project grade of over 100% to your average. Your score won’t get hurt if you don’t do it, but if your current average is greater than your score on this project, your average might go down.
-Have fun!  
+# INTRODUCTION
+RSA is one of the oldest public-key cryptosystem that is used for secure data transmission. The acronym RSA comes from the surnames of Ron Rivest, Adi Shamir and Leonard Adleman who publicly described the algorithm in 1976.
 
-#Resources Read or watch:  
+# The Task
+An unsecured network was searched and the numbers used to encrypt very important documents were found. It seems that those numbers are not always generated using large enough prime numbers. The mission is to factorize these numbers as fast as possible before the target fixes this bug on their server - so that the encrypted documents can be decoded.
 
-RSA How does HTTPS provide security? 
-Prime Factorization Requirements General You can choose the language of your choice. 
-OS needs to be Standard Ubuntu 20.04 LTS/
+# 0-Factorize all the things!
+Here, as many number as possible will be factorized into a product of two smaller numbers.
+
+Usage: factors <file>
+where <file> is file containing natural numbers to factor.
+One number per line.
+Assume that all lines will be valid natural numbers greater than 1
+Assume that there will be no empty linen, no space before and after the valid number.
+File will always end in a new line
+Output format: n=p*q
+one factorization per line
+p and q don't have to be prime numbers.
+Program should run without any dependancy
+Time limit: program will be killed after 5 seconds if it hasn't finished.
