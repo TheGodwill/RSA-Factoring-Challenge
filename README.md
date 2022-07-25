@@ -1,22 +1,50 @@
-# RSA-Factoring-Challenge
+# factors.c-Factoring-Challenge
+Alx factors.c-Factoring-Challenge
 
-# INTRODUCTION
-RSA is one of the oldest public-key cryptosystem that is used for secure data transmission. The acronym RSA comes from the surnames of Ron Rivest, Adi Shamir and Leonard Adleman who publicly described the algorithm in 1976.
 
-# The Task
-An unsecured network was searched and the numbers used to encrypt very important documents were found. It seems that those numbers are not always generated using large enough prime numbers. The mission is to factorize these numbers as fast as possible before the target fixes this bug on their server - so that the encrypted documents can be decoded.
+chmod u+x lists.h && git add --chmod=+x lists.h && git commit -m 'header file lists.h' && git push
 
-# 0-Factorize all the things!
-Here, as many number as possible will be factorized into a product of two smaller numbers.
+chmod u+x factors && git add --chmod=+x factors && git commit -m 'Task 01 factors Laboratories states that: for each factors number n, there exist prime numbers p and q such that factors' && git push
 
-Usage: factors <file>
-where <file> is file containing natural numbers to factor.
-One number per line.
-Assume that all lines will be valid natural numbers greater than 1
-Assume that there will be no empty linen, no space before and after the valid number.
-File will always end in a new line
-Output format: n=p*q
-one factorization per line
-p and q don't have to be prime numbers.
-Program should run without any dependancy
-Time limit: program will be killed after 5 seconds if it hasn't finished.
+
+chmod u+x 100-print_python_list_info.c  && git add --chmod=+x 100-print_python_list_info.c  && git commit -m 'Advanced Task 14 a C function that prints some basic info about Python lists. 100-print_python_list_info.c ' && git push
+
+chmod u+x 4-print_hexa.py && git add --all && git commit -m 'task 04 4-print_hexa.py' && git push
+
+
+
+
+
+
+
+#!/usr/bin/python3
+import sys
+import math
+
+
+def reading(file):
+    # total = 0
+    with open(file) as data:
+        new_data = data.readlines()
+        # print(new_data)
+    return new_data
+
+
+for file_index in range(len(sys.argv)):
+    if file_index != 0:
+        data = reading(sys.argv[file_index])
+        for item in data:
+            number = int(item)
+            # print(number)
+
+            if number % 2 == 0:
+                print("{}*2".format(number//2))
+                continue
+            for i in range(3, number, 2):
+                if number % i == 0:
+                    factor = number//i
+                    for j in range(3, factor, 2):
+                        if factor % j == 0 or i % j == 0:
+                                break
+                        print("{}*{}".format(factor, i))
+                        break
